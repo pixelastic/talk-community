@@ -1,0 +1,35 @@
+include ./partials/config.pug
+include ./partials/mixins.pug
+doctype html
+html(lang="en")
+  head
+    title=talk_title
+    meta(name="description" content=talk_description)
+    meta(name="author" content=talk_author)
+    meta(name="apple-mobile-web-app-capable" content="yes")
+    meta(name="apple-mobile-web-app-status-bar-style" content="black-translucent")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+    link(rel='stylesheet', type='text/css', href='./main.css')
+    link(rel='shortcut icon', href='./favicon.ico')
+    <!--[if lt IE 9]>
+      script(src='./js/html5shiv.js')
+    <![endif]-->
+  body
+    .reveal
+      .fixed.w-100
+        .frn.justify-between.pa1
+          a.fn.flex.fvc(href='https://www.algolia.com')
+            img(src='./img/community.svg')
+          a.f8.fn.flex.fvc.raleway.white
+            |Nov 16th, 2016
+
+      .slides.white
+
+        include ./slides/title.pug
+
+
+  script(src='./js/head.min.js')
+  script(src='./js/reveal.js')
+  script(src='./app.js')
+  script require('javascripts/app').default.init()
+

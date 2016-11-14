@@ -1,0 +1,31 @@
+*, :after, :before {
+  box-sizing: border-box;
+}
+// Change base font-size so all tachyon scale adapt
+html {
+  font-size: 48px;
+}
+body {
+  background-image: linear-gradient(140deg, #2f6b91 10%, #182848 90%);
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+// Default reveal values override
+.reveal {
+  .slides {
+    text-align: left;
+  }
+  .progress {
+    height: 15px;
+    span {
+      background-color: $progress;
+    }
+  }
+  pre {
+    width: initial;
+    margin: 0;
+    code {
+      padding: 0;
+    }
+  }
+}

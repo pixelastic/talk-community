@@ -1,3 +1,18 @@
 mixin h1(name, additional_classes)
   - additional_classes = additional_classes || ''
   h1.ma0.raleway.f1.tc.text-shadow= name
+
+mixin h3(name, additional_classes)
+  - additional_classes = additional_classes || ''
+  h3.ma0.raleway.f3.text-shadow= name
+
+mixin author(name, handle, custom_classes)
+  - custom_classes = custom_classes || ''
+  a.link.white.frn.f6(href=`https://github.com/${handle}`, class=custom_classes)
+    .fn.fc
+      img.db.br-100.h1(src=`./img/authors/${handle}.png`)
+    .fa.flex.fvc.pl1.raleway=`${name}`
+
+mixin repo(path, custom_classes)
+  - custom_classes = custom_classes || ''
+  a.link.white.f7.hack(href=`https://github.com/${path}`, class=custom_classes)=`${path}`

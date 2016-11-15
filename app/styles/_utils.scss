@@ -15,9 +15,9 @@
 .fa { flex:1 1 auto; min-width:0; min-height:0; }
 .fn { flex: none; }
 // Center
-.fvc { align-items: center }
-.fhc { justify-content: center }
-.fc { align-items: center; justify-content: center; }
+.fvc { display: flex; align-items: center }
+.fhc { display: flex; justify-content: center }
+.fc { display: flex; align-items: center; justify-content: center; }
 // Margin
 .mla { margin-left: auto; }
 .mra { margin-right: auto; }
